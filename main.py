@@ -11,10 +11,10 @@ class Mox(commands.Bot):
 		super().__init__(command_prefix='.', intents=intents, help_command=None)
 
 	async def load_cogs(self):
-		for dirpath, _, filenames in os.walk('/home/kakarun/Downloads/Moxyz/cogs'):
+		for dirpath, _, filenames in os.walk('/home/Moxyz/cogs'):
 			for filename in filenames:
 				if filename.endswith('.py'):
-					relative = os.path.relpath(dirpath, '/home/kakarun/Downloads/Moxyz/cogs')
+					relative = os.path.relpath(dirpath, '/home/Moxyz/cogs')
 					if relative == '.':
 						module = f'cogs.{filename[:-3]}'
 					else:
